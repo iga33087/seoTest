@@ -1,0 +1,287 @@
+$color1:#D0104C;
+$shape1:polygon(0 0, 100% 100%, 100% 0);
+
+html,body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Microsoft JhengHei";
+}
+
+#__nuxt {
+  height: 100%;
+}
+
+#__layout {
+  height: 100%;
+}
+
+.header {
+  height: 100px;
+  background-color: $color1;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .headerLogo {
+    color:#fff;
+    font-weight: bold;
+    font-size: 3rem;
+  }
+  .headerMenu {
+    display: flex;
+    font-size: 3rem;
+    color:#fff;
+  }
+  .headerMenuItem {
+
+  }
+}
+
+.floor {
+  height: 200px;
+  background-color: #000;
+  position: relative;
+  .egg {
+    height: 200px;
+    position: absolute;
+    top:-200px;
+    left:0px;
+  }
+}
+
+.layout {
+  width: 1200px;
+  min-height: calc(100% - 100px);
+  display: flex;
+  margin: 0 auto;
+}
+
+.layoutBox {
+  height: 100%;
+}
+
+.leftMenu {
+  width: 180px;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0 20px 0 0;
+  background-color: $color1;
+  position: relative;
+  &::after {
+    content: "";
+    width: 1000px;
+    height: 100%;
+    background-color: $color1;
+    position: absolute;
+    top:0px;
+    left:-1000px;
+  }
+}
+
+.leftMenuItem {
+  padding: 10px;
+  color:#fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-width: 0 0 2px 0;
+  border-style: dashed;
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    color:$color1;
+    background-color: #fff;
+  }
+  &:hover > .leftMenuItemChildren {
+    display: block;
+  }
+  .leftMenuItemTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .leftMenuItemChildren {
+    width: 180px;
+    display: none;
+    background-color: $color1;
+    position: absolute;
+    top:0;
+    right:-180px;
+    z-index: 2;
+  }
+}
+
+
+
+.content {
+  width: 1000px;
+}
+
+.testList {
+  .testListItem {
+    height: 100px;
+    border: 1px solid #222;
+    border-radius: 10px;
+    margin: 0 0 10px 0;
+  }
+}
+
+.commodityList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.commodity {
+  width: calc(25% - 20px);
+  margin: 0 20px 20px 0;
+  box-shadow: 0 0 2px #000;
+  position: relative;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  &:nth-child(4n) {
+    width: 25%;
+    margin: 0 0 20px 0;
+  } 
+  &:hover {
+    transform: scale(1.1,1.1);
+    box-shadow: 5px 5px 0px $color1;
+  }
+  .commodityImgBox {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  .commodityImgBoxImg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition-duration: 0.2s;
+  }
+  .commodityInfo {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .commodityInfoBoxTitle {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  .commodityInfoBoxPrice {
+    text-align: center;
+    color:#f00;
+    font-weight: bold;
+  }
+  .commodityDiscount {
+    width: 70px;
+    height: 70px;
+    background-color: #f00;
+    position: absolute;
+    top:0;
+    right:0;
+    clip-path: $shape1;
+    z-index: 2;
+  }
+  .commodityDiscountContent {
+    color:#fff;
+    font-weight: bold;
+    font-size: 18px;
+    position: absolute;
+    top:10px;
+    right:0;
+    transform: rotate(40deg);
+  }
+  .commodityMenu {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  .commodityMenuItem {
+    width: calc(100% / 4);
+    text-align: center;
+    font-size: 2rem;
+    color:$color1;
+    box-sizing: border-box;
+    border-width: 0 1px 0 0;
+    border-style: dashed;
+    border-color: $color1;
+    &:nth-child(3) {
+      border-width: 0;
+    }
+    &:hover {
+      color:#000;
+    }
+  }
+}
+
+.featuresBar {
+  display: flex;
+  padding: 20px 0;
+  justify-content: space-between;
+  .featuresBarSearch {
+    display: flex;
+  }
+  .featuresBarSearchItem {
+    margin: 0 10px 0 0;
+  }
+  .featuresBarDisplayMode {
+    display: flex;
+  }
+}
+
+.elCarousel {
+
+  .elCarouselItem {
+    height: 100%;
+    background-color: #000;
+  }
+}
+
+.commodityDetail {
+  .commodityDetailBox {
+    display: flex;
+  }
+  .commodityDetailBoxImg {
+    width: 400px;
+    height: 400px;
+    margin: 0 20px 0 0;
+  }
+  .commodityDetailBoxImgImg {
+    width: 100%;
+    height: 100%;
+  }
+  .commodityDetailBoxInfo {
+    width: calc(100% - 420px);
+  }
+  .commodityDetailBoxInfoBox {
+    height: 320px;
+  }
+  .commodityDetailBoxInfoMenu {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .commodityDetailBoxInfoMenuItem {
+    width: calc(100% / 3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .commodityDetailBoxInfoItem {
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px 0;
+  }
+  .commodityDetailBoxInfoItemTitle {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0 20px 0 0;
+  }
+  .commodityDetailBoxInfoItemLast {
+    display: block;
+  }
+  .commodityDetailBoxInfoItemContentLast {
+    padding: 10px;
+  }
+}
