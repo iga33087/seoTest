@@ -1,7 +1,7 @@
 import axios from 'axios'
 export default ({ app }, inject) => {
     inject('api', {
-      baseURL:"http://localhost:7000/",
+      baseURL:"https://storeapi001.herokuapp.com/",
       getTagList() {
         return axios.get(this.baseURL+"tag").then(res=>res.data)
       },
