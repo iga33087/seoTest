@@ -6,6 +6,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'google-site-verification', content: 'mP_GoRh5uEg7R1SrDtubnc_q4pWAG4JSL0VEImPaIIk' },
+      { "http-equiv":'content-language',content:'zh-tw' },
       { hid: 'description', name: 'description', content: '歡迎光臨七七測試商城~' }
     ],
     link: [
