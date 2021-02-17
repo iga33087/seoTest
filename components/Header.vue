@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <div class="headerLogo">測試商城</div>
+    <div class="headerLogo">七七測試商城</div>
     <div class="headerMenu">
       <div class="headerMenuItem">
         <i class="el-icon-user-solid"></i>
